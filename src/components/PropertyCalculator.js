@@ -98,7 +98,9 @@ function PropertyCalculator() {
             />
           </div>
           <div className="button-group">
-
+            <button className="calculate-button" onClick={calculateLoanPayment}>
+              Calculate Loan Payment
+            </button>
             <button className="calculate-button" onClick={checkAffordability}>
               Check Affordability
             </button>
