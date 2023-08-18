@@ -23,6 +23,10 @@ function App() {
       case 'PercentageCal':
         calculatorComponent = <PercentageCal />;
         break;
+        default:
+        calculatorComponent = <PercentageCal />;
+        break;
+
   }
 
   return (
