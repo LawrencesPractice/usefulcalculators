@@ -7,6 +7,7 @@ function FuelCalculator() {
   const [fuelEconomy, setFuelEconomy] = useState('');
   const [fuelCost, setFuelCost] = useState('');
   const [result, setResult] = useState('');
+  const [showHelper, setShowHelper] = useState(false);
 
   const calculateFuelUsage = () => {
     const calculatedResult = (parseFloat(distance) / parseFloat(fuelEconomy)).toFixed(2);
@@ -107,10 +108,10 @@ function FuelCalculator() {
           </div>
         </div>
       </main>
-      {/* <button className={`helper-button ${showHelper ? 'active' : ''}`} onClick={() => setShowHelper(!showHelper)}>
+      <button className={`helper-button ${showHelper ? 'active' : ''}`} onClick={() => setShowHelper(!showHelper)}>
         How to use Fuel Calculator
       </button>
-      {showHelper && <HelperPage />} */}
+      {showHelper && <HelperPage />}
 
       <footer className="footer">
         <p>&copy; 2023 Fuel Calculator</p>

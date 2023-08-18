@@ -37,6 +37,19 @@ function BMICalculator() {
     localStorage.setItem('lastCalculation', JSON.stringify(calculation));
   }, [weight, height, result]);
 
+  // Define weight categories and suggestions
+  const weightCategories = [
+    { category: 'Underweight', minBMI: 0, maxBMI: 18.5, suggestion: 'You may need to gain weight. Consult with a healthcare professional for a proper diet and exercise plan.' },
+    { category: 'Normal weight', minBMI: 18.5, maxBMI: 24.9, suggestion: 'Congratulations! You have a healthy weight. Maintain a balanced diet and regular exercise routine to stay healthy.' },
+    { category: 'Overweight', minBMI: 25, maxBMI: 29.9, suggestion: 'You may need to lose some weight. Consult with a healthcare professional for a proper diet and exercise plan.' },
+    { category: 'Obese', minBMI: 30, maxBMI: Number.POSITIVE_INFINITY, suggestion: 'You may need to lose weight for your health. Consult with a healthcare professional for a proper diet and exercise plan.' },
+  ];
+
+  // Find the weight category based on BMI
+  const findWeightCategory = (bmi) => {
+    return weightCategories.find(category => bmi >= category.minBMI && bmi <= category.maxBMI);
+  };
+
   return (
     <div className="App">
       <header className="header">
@@ -82,7 +95,16 @@ function BMICalculator() {
           </div>
           <div className="result">
             {result && !isNaN(result) ? (
-              <p className="result-text">{`Your BMI is ${result}`}</p>
+              <>
+                <p className="result-text">{`Your BMI is ${result}`}</p>
+                {findWeightCategory(parseFloat(result)) && (
+                  <p className="suggestion">
+                    {`Category: ${findWeightCategory(parseFloat(result)).category}`}
+                    <br />
+                    {`Suggestion: ${findWeightCategory(parseFloat(result)).suggestion}`}
+                  </p>
+                )}
+              </>
             ) : (
               <p className="error">Invalid input. Please enter valid values.</p>
             )}
