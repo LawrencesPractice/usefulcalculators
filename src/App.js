@@ -1,54 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import PercentageCal from './components/PercentageCal.js';
 import FuelCalculator from './components/FuelCalculator.js';
 import BMICalculator from './components/BMICalculator.js';
 
 function App() {
-  const [selectedCalculator, setSelectedCalculator] = useState('');
-
-  const handleCalculatorSelection = (calculator) => {
-    setSelectedCalculator(calculator);
-  };
-
-  let calculatorComponent;
-  switch (selectedCalculator) {
-    case 'FuelCalculator':
-      calculatorComponent = <FuelCalculator />;
-      break;
-    case 'BMICalculator':
-      calculatorComponent = <BMICalculator />;
-      break;
-
-      case 'PercentageCal':
-        calculatorComponent = <PercentageCal />;
-        break;
-        default:
-        calculatorComponent = <PercentageCal />;
-        break;
-
-  }
-
   return (
-    <div className="App">
-      {/* Add your navigation component here */}
-      <nav>
-        <ul>
-          <li>
-            <button onClick={() => handleCalculatorSelection('FuelCalculator')}>Fuel Calculator</button>
-          </li>
-          <li>
-            <button onClick={() => handleCalculatorSelection('BMICalculator')}>BMI Calculator</button>
-          </li>
-          <li>
-            <button onClick={() => handleCalculatorSelection('PercentageCal')}>Percentage Calculator</button>
-          </li>
-
-        </ul>
-      </nav>
-      {/* Render the selected calculator component */}
-      {calculatorComponent}
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/fuel-calculator">Fuel Calculator</Link>
+            </li>
+            <li>
+              <Link to="/bmi-calculator">BMI Calculator</Link>
+            </li>
+            <li>
+              <Link to="/percentage-calculator">Percentage Calculator</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/fuel-calculator" element={<FuelCalculator />} />
+          <Route path="/bmi-calculator" element={<BMICalculator />} />
+          <Route path="/percentage-calculator" element={<PercentageCal />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
