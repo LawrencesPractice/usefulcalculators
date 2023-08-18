@@ -78,7 +78,7 @@ function IncomeExpensesCalculator() {
               type="number"
               className="input-field"
               name="income"
-              placeholder="Enter Income"
+              placeholder="Enter Income Per month"
               value={income}
               onChange={(e) => setIncome(parseFloat(e.target.value))}
             />

@@ -5,6 +5,7 @@ import PercentageCal from './components/PercentageCal.js';
 import FuelCalculator from './components/FuelCalculator.js';
 import BMICalculator from './components/BMICalculator.js';
 import IncomeExpensesCalculator from './components/IncomeExpensesCalculator';
+import PropertyCalculator from './components/PropertyCalculator';
 function App() {
   return (
     <Router>
@@ -23,6 +24,10 @@ function App() {
             <li>
               <Link to="/incomeExpenses-calculator">Income vs expenses Calculator</Link>
             </li>
+            <li>
+            <Link to="/property-affordability-calculator">Property affordability Calculator</Link>
+
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -30,6 +35,7 @@ function App() {
           <Route path="/bmi-calculator" element={<BMICalculator />} />
           <Route path="/percentage-calculator" element={<PercentageCal />} />
           <Route path="/incomeExpenses-calculator" element={<IncomeExpensesCalculator />} />
+          <Route path="/property-affordability-calculator" element={<PropertyCalculator />} />
 
         </Routes>
       </div>
