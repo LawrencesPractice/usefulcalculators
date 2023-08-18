@@ -1,0 +1,38 @@
+.helper-page {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.helper-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.helper-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.helper-subtitle {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.helper-list {
+  font-size: 16px;
+  color: #333;
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+/* Add more styling rules as needed */
