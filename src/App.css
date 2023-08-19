@@ -273,3 +273,28 @@ nav button:focus {
   color: white;
   cursor: pointer;
 }
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+}
+
+.footer p {
+  font-size: 14px;
+}

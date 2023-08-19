@@ -114,7 +114,7 @@ function FuelCalculator() {
       {showHelper && <HelperPage />}
 
       <footer className="footer">
-        <p>&copy; 2023 Fuel Calculator</p>
+        <p>&copy; 2023 Quick Calculator solver</p>
       </footer>
     </div>
   );

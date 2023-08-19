@@ -128,7 +128,7 @@ function PercentageCal() {
       {showHelper && <HelperPage />}
 
       <footer className="footer">
-        <p>&copy; 2023 Quick Percentage Solver</p>
+        <p>&copy; 2023 Quick Calculator solver</p>
       </footer>
     </div>
   );

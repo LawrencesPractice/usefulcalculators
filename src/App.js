@@ -6,6 +6,8 @@ import FuelCalculator from './components/FuelCalculator.js';
 import BMICalculator from './components/BMICalculator.js';
 import IncomeExpensesCalculator from './components/IncomeExpensesCalculator';
 import PropertyCalculator from './components/PropertyCalculator';
+import HomePage from './components/HomePage'; // Import the HomePage component
+
 function App() {
   return (
     <Router>
@@ -25,18 +27,17 @@ function App() {
               <Link to="/incomeExpenses-calculator">Income vs expenses Calculator</Link>
             </li>
             <li>
-            <Link to="/property-affordability-calculator">Property affordability Calculator</Link>
-
+              <Link to="/property-affordability-calculator">Property affordability Calculator</Link>
             </li>
           </ul>
         </nav>
         <Routes>
+          <Route path="/" element={<HomePage />} /> {/* Set the HomePage component as the element for the root route */}
           <Route path="/fuel-calculator" element={<FuelCalculator />} />
           <Route path="/bmi-calculator" element={<BMICalculator />} />
           <Route path="/percentage-calculator" element={<PercentageCal />} />
           <Route path="/incomeExpenses-calculator" element={<IncomeExpensesCalculator />} />
           <Route path="/property-affordability-calculator" element={<PropertyCalculator />} />
-
         </Routes>
       </div>
     </Router>

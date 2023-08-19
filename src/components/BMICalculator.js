@@ -117,7 +117,7 @@ function BMICalculator() {
       {showHelper && <HelperPage />}
 
       <footer className="footer">
-        <p>&copy; 2023 BMI Calculator</p>
+        <p>&copy; 2023 Quick Calculator solver</p>
       </footer>
     </div>
   );
