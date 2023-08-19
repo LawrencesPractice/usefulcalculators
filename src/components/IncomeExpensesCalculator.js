@@ -57,13 +57,13 @@ function IncomeExpensesCalculator() {
       setExpenses(lastCalculation.expenses);
       setSavings(lastCalculation.savings);
     }
-  }, []);
+  }, [expenses, income]);
 
   useEffect(() => {
     // Save calculation to local storage whenever savings changes
     const calculation = { income, expenses, savings };
     localStorage.setItem('lastCalculation', JSON.stringify(calculation));
-  }, [savings]);
+  }, [savings, income, expenses]);
 
   return (
     <div className="App">
