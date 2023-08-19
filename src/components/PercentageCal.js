@@ -47,7 +47,7 @@ function PercentageCal() {
   return (
     <div className="App">
       <header className="header">
-        <img src="/apple-touch-icon.png" alt="Apple Touch Icon" /> {/* Display the image */}        <h1>Quick Percentage Solver</h1>
+        <img src="../apple-touch-icon.png" alt="Apple Touch Icon" /> {/* Display the image */}        <h1>Quick Percentage Solver</h1>
       </header>
       <main className="main-content">
         <div className="calculator">

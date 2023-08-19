@@ -68,7 +68,7 @@ function IncomeExpensesCalculator() {
   return (
     <div className="App">
       <header className="header">
-        <img src="/apple-touch-icon.png" alt="Apple Touch Icon" />
+        <img src="../apple-touch-icon.png" alt="Apple Touch Icon" />
         <h1>Income vs. Expenses Calculator</h1>
       </header>
       <main className="main-content">
